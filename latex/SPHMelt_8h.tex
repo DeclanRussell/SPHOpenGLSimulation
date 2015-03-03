@@ -1,0 +1,53 @@
+\hypertarget{SPHMelt_8h}{\section{include/\-S\-P\-H\-Melt.h File Reference}
+\label{SPHMelt_8h}\index{include/\-S\-P\-H\-Melt.\-h@{include/\-S\-P\-H\-Melt.\-h}}
+}
+
+
+This is my \hyperlink{classSPHMelt}{S\-P\-H\-Melt} class, If will be used to create my normal grid, particles and index them accordingly.  
+
+
+{\ttfamily \#include $<$stdlib.\-h$>$}\\*
+{\ttfamily \#include $<$ngl/\-Vec3.\-h$>$}\\*
+{\ttfamily \#include $<$ngl/\-Obj.\-h$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$list$>$}\\*
+{\ttfamily \#include \char`\"{}particle.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$math.\-h$>$}\\*
+{\ttfamily \#include $<$ngl/\-Transform\-Stack.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}signed\-\_\-distance\-\_\-field\-\_\-from\-\_\-mesh.\-hpp\char`\"{}}\\*
+{\ttfamily \#include $<$ctime$>$}\\*
+{\ttfamily \#include \char`\"{}collision.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\-P\-H\-Solver.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\-P\-H\-Hash.\-h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classSPHMelt}{S\-P\-H\-Melt}
+\begin{DoxyCompactList}\small\item\em Our main simulation class. Used to call all the other classes we have created. \end{DoxyCompactList}\item 
+struct \hyperlink{structSPHMelt_1_1vertData}{S\-P\-H\-Melt\-::vert\-Data}
+\item 
+struct \hyperlink{structSPHMelt_1_1externalForce}{S\-P\-H\-Melt\-::external\-Force}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is my \hyperlink{classSPHMelt}{S\-P\-H\-Melt} class, If will be used to create my normal grid, particles and index them accordingly. This is my \hyperlink{classSPHSolver}{S\-P\-H\-Solver} class, this will be used to calculate the forces of a particle with the navier stokes eqations.
+
+This is also the class I will use for all my particle calculations and updates \begin{DoxyAuthor}{Author}
+Declan Russell 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+15/11/13
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Declan Russell 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\-0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+28/03/14 
+\end{DoxyDate}

@@ -1,0 +1,188 @@
+\hypertarget{classSPHMelt}{\section{S\-P\-H\-Melt Class Reference}
+\label{classSPHMelt}\index{S\-P\-H\-Melt@{S\-P\-H\-Melt}}
+}
+
+
+Our main simulation class. Used to call all the other classes we have created.  
+
+
+
+
+{\ttfamily \#include $<$S\-P\-H\-Melt.\-h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structSPHMelt_1_1externalForce}{external\-Force}
+\item 
+struct \hyperlink{structSPHMelt_1_1vertData}{vert\-Data}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classSPHMelt_abf63f796e20c65ea0792f3b57e9853c5}{\hyperlink{classSPHMelt_abf63f796e20c65ea0792f3b57e9853c5}{S\-P\-H\-Melt} ()}\label{classSPHMelt_abf63f796e20c65ea0792f3b57e9853c5}
+
+\begin{DoxyCompactList}\small\item\em just a plain constructor that does nothing \end{DoxyCompactList}\item 
+\hypertarget{classSPHMelt_af6fd66dad40740d7bb0af19ecfb650ea}{\hyperlink{classSPHMelt_af6fd66dad40740d7bb0af19ecfb650ea}{S\-P\-H\-Melt} (std\-::string \-\_\-mesh\-Location)}\label{classSPHMelt_af6fd66dad40740d7bb0af19ecfb650ea}
+
+\begin{DoxyCompactList}\small\item\em Our constructor, reads in the vetexes of our mesh and stores them in m\-\_\-mesh\-Verts. \end{DoxyCompactList}\item 
+\hypertarget{classSPHMelt_ac09f46a167ba1ce51e639eca54c2bc2a}{void \hyperlink{classSPHMelt_ac09f46a167ba1ce51e639eca54c2bc2a}{update} ()}\label{classSPHMelt_ac09f46a167ba1ce51e639eca54c2bc2a}
+
+\begin{DoxyCompactList}\small\item\em Our update function. Update particles with S\-P\-H, Collision and then rewrites to the V\-A\-O. \end{DoxyCompactList}\item 
+\hypertarget{classSPHMelt_a85a717d732a3e4be89d36cedb483d2ac}{void \hyperlink{classSPHMelt_a85a717d732a3e4be89d36cedb483d2ac}{draw\-Mesh} ()}\label{classSPHMelt_a85a717d732a3e4be89d36cedb483d2ac}
+
+\begin{DoxyCompactList}\small\item\em A functio to draw our mesh. \end{DoxyCompactList}\item 
+void \hyperlink{classSPHMelt_a64183bc720941736a9e3705fb896c993}{gen\-Particles} (int \-\_\-num\-Particles, float \-\_\-mass)
+\begin{DoxyCompactList}\small\item\em A function to create our particles from our mesh vertecies. \end{DoxyCompactList}\item 
+\hypertarget{classSPHMelt_a3d9da7029661124e3aabd1e24befa29d}{int \hyperlink{classSPHMelt_a3d9da7029661124e3aabd1e24befa29d}{get\-Num\-Particles} ()}\label{classSPHMelt_a3d9da7029661124e3aabd1e24befa29d}
+
+\begin{DoxyCompactList}\small\item\em Just a fucntion so the scene can queury how many particles so that we can write it to screen. \end{DoxyCompactList}\item 
+\hypertarget{classSPHMelt_a85546245558ea9821928e9b22470db52}{void \hyperlink{classSPHMelt_a85546245558ea9821928e9b22470db52}{init} ()}\label{classSPHMelt_a85546245558ea9821928e9b22470db52}
+
+\begin{DoxyCompactList}\small\item\em Initialize our simulation. Set up V\-A\-O, generate particles, add collision walls and start the clock. \end{DoxyCompactList}\item 
+void \hyperlink{classSPHMelt_ae1a307a3d8c33ebe599b74ab5bc2687c}{set\-Mesh\-Verts} (std\-::vector$<$ ngl\-::\-Vec3 $>$ \-\_\-vertex)
+\begin{DoxyCompactList}\small\item\em we need a special function to convert the mesh vec3's to our vec3$\ast$ \end{DoxyCompactList}\item 
+void \hyperlink{classSPHMelt_a47fbcb7522dbd8e647f818d094002d91}{set\-Cam} (ngl\-::\-Camera $\ast$\-\_\-c)
+\begin{DoxyCompactList}\small\item\em set the scenes camera for all our particles \end{DoxyCompactList}\item 
+void \hyperlink{classSPHMelt_a3293b79bb29229004db2b12d24f50778}{draw\-Particles} (ngl\-::\-Transform\-Stack trans)
+\begin{DoxyCompactList}\small\item\em calls draw function in all our particles \end{DoxyCompactList}\item 
+\hypertarget{classSPHMelt_a13d4145dbc7f7de93fd806a8971fe935}{void \hyperlink{classSPHMelt_a13d4145dbc7f7de93fd806a8971fe935}{reset\-Clock} ()}\label{classSPHMelt_a13d4145dbc7f7de93fd806a8971fe935}
+
+\begin{DoxyCompactList}\small\item\em reset our clock. used if we pause the simulation \end{DoxyCompactList}\item 
+\hypertarget{classSPHMelt_a2b67bc2d7444505213431381a1d96f55}{void \hyperlink{classSPHMelt_a2b67bc2d7444505213431381a1d96f55}{set\-External\-Force} (ngl\-::\-Vec3 \-\_\-source\-Pos=ngl\-::\-Vec3(0), float \-\_\-radius=0, float \-\_\-force\-Strength=0, bool \-\_\-push=true)}\label{classSPHMelt_a2b67bc2d7444505213431381a1d96f55}
+
+\begin{DoxyCompactList}\small\item\em a fucntion to set the parameters of our external force for our S\-P\-H solver; \end{DoxyCompactList}\item 
+void \hyperlink{classSPHMelt_a9286b6a873a0103ef13b2bc163bd75d2}{draw\-External\-Force} (ngl\-::\-Transform\-Stack $\ast$\-\_\-transform\-Stack, ngl\-::\-Camera $\ast$\-\_\-cam)
+\begin{DoxyCompactList}\small\item\em a function to draw the source of our external force. \end{DoxyCompactList}\item 
+void \hyperlink{classSPHMelt_ad291297d1b9c634b82ae5d033d9eb919}{draw\-Collision} (ngl\-::\-Transform\-Stack $\ast$\-\_\-transform\-Stack, ngl\-::\-Camera $\ast$\-\_\-cam)
+\begin{DoxyCompactList}\small\item\em a function to draw the walls of our collision. Just used to pass paramiters to our collision class \end{DoxyCompactList}\item 
+\hypertarget{classSPHMelt_a7922b30c46531e98ea6bbfa6ac51aa2a}{void \hyperlink{classSPHMelt_a7922b30c46531e98ea6bbfa6ac51aa2a}{start\-Mesh\-Sim} ()}\label{classSPHMelt_a7922b30c46531e98ea6bbfa6ac51aa2a}
+
+\begin{DoxyCompactList}\small\item\em restarts the mesh simulation. \end{DoxyCompactList}\item 
+\hypertarget{classSPHMelt_ab4ea1cf0ac6cec3828b296229505d4a6}{void \hyperlink{classSPHMelt_ab4ea1cf0ac6cec3828b296229505d4a6}{toggle\-Sim} ()}\label{classSPHMelt_ab4ea1cf0ac6cec3828b296229505d4a6}
+
+\begin{DoxyCompactList}\small\item\em A function to toggle between our mesh simulation and our 2d simulation;. \end{DoxyCompactList}\item 
+\hypertarget{classSPHMelt_a7645dc2f671f164fc288b2e0a6c0be37}{void \hyperlink{classSPHMelt_a7645dc2f671f164fc288b2e0a6c0be37}{restart} ()}\label{classSPHMelt_a7645dc2f671f164fc288b2e0a6c0be37}
+
+\begin{DoxyCompactList}\small\item\em restarts the simumaltion \end{DoxyCompactList}\item 
+\hypertarget{classSPHMelt_a3765b15c184fc6bda80fecdb43cfb287}{void \hyperlink{classSPHMelt_a3765b15c184fc6bda80fecdb43cfb287}{two\-D\-Water\-Sim\-Start} ()}\label{classSPHMelt_a3765b15c184fc6bda80fecdb43cfb287}
+
+\begin{DoxyCompactList}\small\item\em change the scene to a 2d water simulation so you can see the physics \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Our main simulation class. Used to call all the other classes we have created. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classSPHMelt_ad291297d1b9c634b82ae5d033d9eb919}{\index{S\-P\-H\-Melt@{S\-P\-H\-Melt}!draw\-Collision@{draw\-Collision}}
+\index{draw\-Collision@{draw\-Collision}!SPHMelt@{S\-P\-H\-Melt}}
+\subsubsection[{draw\-Collision}]{\setlength{\rightskip}{0pt plus 5cm}void S\-P\-H\-Melt\-::draw\-Collision (
+\begin{DoxyParamCaption}
+\item[{ngl\-::\-Transform\-Stack $\ast$}]{\-\_\-transform\-Stack, }
+\item[{ngl\-::\-Camera $\ast$}]{\-\_\-cam}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classSPHMelt_ad291297d1b9c634b82ae5d033d9eb919}
+
+
+a function to draw the walls of our collision. Just used to pass paramiters to our collision class 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \-\_\-transform\-Stack} & -\/ Our global transform stack so that they can rotate with the scene \\
+\hline
+{\em \-\_\-cam} & -\/ our scene camera so we can rotate the walls with the scene \\
+\hline
+\end{DoxyParams}
+\hypertarget{classSPHMelt_a9286b6a873a0103ef13b2bc163bd75d2}{\index{S\-P\-H\-Melt@{S\-P\-H\-Melt}!draw\-External\-Force@{draw\-External\-Force}}
+\index{draw\-External\-Force@{draw\-External\-Force}!SPHMelt@{S\-P\-H\-Melt}}
+\subsubsection[{draw\-External\-Force}]{\setlength{\rightskip}{0pt plus 5cm}void S\-P\-H\-Melt\-::draw\-External\-Force (
+\begin{DoxyParamCaption}
+\item[{ngl\-::\-Transform\-Stack $\ast$}]{\-\_\-transform\-Stack, }
+\item[{ngl\-::\-Camera $\ast$}]{\-\_\-cam}
+\end{DoxyParamCaption}
+)}}\label{classSPHMelt_a9286b6a873a0103ef13b2bc163bd75d2}
+
+
+a function to draw the source of our external force. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \-\_\-transform\-Stack} & -\/ Our global transform stack so that they can rotate with the scene \\
+\hline
+{\em \-\_\-cam} & -\/ our scene camera so we can rotate with the scene \\
+\hline
+\end{DoxyParams}
+\hypertarget{classSPHMelt_a3293b79bb29229004db2b12d24f50778}{\index{S\-P\-H\-Melt@{S\-P\-H\-Melt}!draw\-Particles@{draw\-Particles}}
+\index{draw\-Particles@{draw\-Particles}!SPHMelt@{S\-P\-H\-Melt}}
+\subsubsection[{draw\-Particles}]{\setlength{\rightskip}{0pt plus 5cm}void S\-P\-H\-Melt\-::draw\-Particles (
+\begin{DoxyParamCaption}
+\item[{ngl\-::\-Transform\-Stack}]{trans}
+\end{DoxyParamCaption}
+)}}\label{classSPHMelt_a3293b79bb29229004db2b12d24f50778}
+
+
+calls draw function in all our particles 
+
+
+\begin{DoxyParams}{Parameters}
+{\em trans} & -\/ the transformstack of our scene \\
+\hline
+\end{DoxyParams}
+\hypertarget{classSPHMelt_a64183bc720941736a9e3705fb896c993}{\index{S\-P\-H\-Melt@{S\-P\-H\-Melt}!gen\-Particles@{gen\-Particles}}
+\index{gen\-Particles@{gen\-Particles}!SPHMelt@{S\-P\-H\-Melt}}
+\subsubsection[{gen\-Particles}]{\setlength{\rightskip}{0pt plus 5cm}void S\-P\-H\-Melt\-::gen\-Particles (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-num\-Particles, }
+\item[{float}]{\-\_\-mass}
+\end{DoxyParamCaption}
+)}}\label{classSPHMelt_a64183bc720941736a9e3705fb896c993}
+
+
+A function to create our particles from our mesh vertecies. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \-\_\-num\-Particles} & -\/ The number of particles we want to create. If more than mesh verticies it will generate particles inside the mesh \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+You must initialise the mesh first 
+\end{DoxyWarning}
+\hypertarget{classSPHMelt_a47fbcb7522dbd8e647f818d094002d91}{\index{S\-P\-H\-Melt@{S\-P\-H\-Melt}!set\-Cam@{set\-Cam}}
+\index{set\-Cam@{set\-Cam}!SPHMelt@{S\-P\-H\-Melt}}
+\subsubsection[{set\-Cam}]{\setlength{\rightskip}{0pt plus 5cm}void S\-P\-H\-Melt\-::set\-Cam (
+\begin{DoxyParamCaption}
+\item[{ngl\-::\-Camera $\ast$}]{\-\_\-c}
+\end{DoxyParamCaption}
+)}}\label{classSPHMelt_a47fbcb7522dbd8e647f818d094002d91}
+
+
+set the scenes camera for all our particles 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Our} & scenes particles \\
+\hline
+\end{DoxyParams}
+\hypertarget{classSPHMelt_ae1a307a3d8c33ebe599b74ab5bc2687c}{\index{S\-P\-H\-Melt@{S\-P\-H\-Melt}!set\-Mesh\-Verts@{set\-Mesh\-Verts}}
+\index{set\-Mesh\-Verts@{set\-Mesh\-Verts}!SPHMelt@{S\-P\-H\-Melt}}
+\subsubsection[{set\-Mesh\-Verts}]{\setlength{\rightskip}{0pt plus 5cm}void S\-P\-H\-Melt\-::set\-Mesh\-Verts (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ ngl\-::\-Vec3 $>$}]{\-\_\-vertex}
+\end{DoxyParamCaption}
+)}}\label{classSPHMelt_ae1a307a3d8c33ebe599b74ab5bc2687c}
+
+
+we need a special function to convert the mesh vec3's to our vec3$\ast$ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \-\_\-vertex} & -\/ Takes in the obj verticies \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{SPHMelt_8h}{S\-P\-H\-Melt.\-h}\item 
+src/S\-P\-H\-Melt.\-cpp\end{DoxyCompactItemize}

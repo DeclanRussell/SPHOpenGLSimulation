@@ -1,0 +1,195 @@
+\hypertarget{classSPHHash}{\section{S\-P\-H\-Hash Class Reference}
+\label{classSPHHash}\index{S\-P\-H\-Hash@{S\-P\-H\-Hash}}
+}
+
+
+Our hash class. this class will hash particles based on their position and return neighbours of the same key.  
+
+
+
+
+{\ttfamily \#include $<$S\-P\-H\-Hash.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classSPHHash_a932bc74f4bcb35b889c26264a1b6611f}{\hyperlink{classSPHHash_a932bc74f4bcb35b889c26264a1b6611f}{S\-P\-H\-Hash} ()}\label{classSPHHash_a932bc74f4bcb35b889c26264a1b6611f}
+
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+\hypertarget{classSPHHash_a36ee41bd38353aae787b3e21db483bf0}{\hyperlink{classSPHHash_a36ee41bd38353aae787b3e21db483bf0}{$\sim$\-S\-P\-H\-Hash} ()}\label{classSPHHash_a36ee41bd38353aae787b3e21db483bf0}
+
+\begin{DoxyCompactList}\small\item\em default destructor \end{DoxyCompactList}\item 
+void \hyperlink{classSPHHash_a7f2a79b0f805eaec59261bcb4c152fe3}{set\-Prime} (int \-\_\-array\-Pos, double \-\_\-prime)
+\begin{DoxyCompactList}\small\item\em mutator for our prime numbers if we want to set them to somthing else \end{DoxyCompactList}\item 
+int \hyperlink{classSPHHash_a4e9e9732324d78090691c16a826ce0b4}{get\-Prime} (int \-\_\-array\-Pos)
+\begin{DoxyCompactList}\small\item\em accessor for our prime numbers if we want to query them \end{DoxyCompactList}\item 
+void \hyperlink{classSPHHash_abb619376308257ed514a52af3615ac96}{set\-Smoothing\-Length} (float \-\_\-smoothing\-Length)
+\begin{DoxyCompactList}\small\item\em A mutatator for our smoothing length, h variable in navier stokes eqations. \end{DoxyCompactList}\item 
+\hypertarget{classSPHHash_ad0de738a768a20c73a532a32aa09b64e}{float \hyperlink{classSPHHash_ad0de738a768a20c73a532a32aa09b64e}{get\-Smoothing\-Length} ()}\label{classSPHHash_ad0de738a768a20c73a532a32aa09b64e}
+
+\begin{DoxyCompactList}\small\item\em returns our Smoothing Length if we need to query it \end{DoxyCompactList}\item 
+void \hyperlink{classSPHHash_a2a4792b43ef215f7e2732cb77ea6e788}{create\-Hash\-Table} (std\-::vector$<$ \hyperlink{classparticle}{particle} $\ast$ $>$ \-\_\-particles)
+\begin{DoxyCompactList}\small\item\em a function to fill our initially fill our hash table wil our particles \end{DoxyCompactList}\item 
+std\-::vector$<$ \hyperlink{classparticle}{particle} $\ast$ $>$ \hyperlink{classSPHHash_a6d83b8f854980ef78d6e7e65c713074d}{get\-Neighbours} (\hyperlink{classparticle}{particle} $\ast$\-\_\-current\-Particle)
+\begin{DoxyCompactList}\small\item\em Returns a vector of a particles neighbours. \end{DoxyCompactList}\item 
+std\-::vector$<$ \hyperlink{classparticle}{particle} $\ast$ $>$ \hyperlink{classSPHHash_ab82b9de0e52cf1bd70cd508bdfd4f1c9}{get\-Neighbours} (\hyperlink{classparticle}{particle} $\ast$\-\_\-current\-Particle, int num\-Particles)
+\begin{DoxyCompactList}\small\item\em Returns a vector of a limited number of particles neighbours, used for optimization. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classSPHHash_a3c4deda30ec87a73d29f6c0b949dd61e}{hash\-Function} (\hyperlink{classparticle}{particle} $\ast$\-\_\-particle)
+\begin{DoxyCompactList}\small\item\em Hash function that generates a key based on the particle position. \end{DoxyCompactList}\item 
+int \hyperlink{classSPHHash_a3a8bfb900e3f8939134b68d992a4e44b}{next\-Prime\-Num} (int \-\_\-current\-Num)
+\begin{DoxyCompactList}\small\item\em A simple function that returns the next prime number from an input number. This is used in calculating our hash. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Our hash class. this class will hash particles based on their position and return neighbours of the same key. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classSPHHash_a2a4792b43ef215f7e2732cb77ea6e788}{\index{S\-P\-H\-Hash@{S\-P\-H\-Hash}!create\-Hash\-Table@{create\-Hash\-Table}}
+\index{create\-Hash\-Table@{create\-Hash\-Table}!SPHHash@{S\-P\-H\-Hash}}
+\subsubsection[{create\-Hash\-Table}]{\setlength{\rightskip}{0pt plus 5cm}void S\-P\-H\-Hash\-::create\-Hash\-Table (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ {\bf particle} $\ast$ $>$}]{\-\_\-particles}
+\end{DoxyParamCaption}
+)}}\label{classSPHHash_a2a4792b43ef215f7e2732cb77ea6e788}
+
+
+a function to fill our initially fill our hash table wil our particles 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \-\_\-particles} & -\/ the vector of our particles \\
+\hline
+\end{DoxyParams}
+\hypertarget{classSPHHash_a6d83b8f854980ef78d6e7e65c713074d}{\index{S\-P\-H\-Hash@{S\-P\-H\-Hash}!get\-Neighbours@{get\-Neighbours}}
+\index{get\-Neighbours@{get\-Neighbours}!SPHHash@{S\-P\-H\-Hash}}
+\subsubsection[{get\-Neighbours}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$ {\bf particle} $\ast$ $>$ S\-P\-H\-Hash\-::get\-Neighbours (
+\begin{DoxyParamCaption}
+\item[{{\bf particle} $\ast$}]{\-\_\-current\-Particle}
+\end{DoxyParamCaption}
+)}}\label{classSPHHash_a6d83b8f854980ef78d6e7e65c713074d}
+
+
+Returns a vector of a particles neighbours. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \-\_\-current\-Particle} & -\/ the particle we want to ind the neighbours of \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector of particle neighbours to our current particles 
+\end{DoxyReturn}
+\hypertarget{classSPHHash_ab82b9de0e52cf1bd70cd508bdfd4f1c9}{\index{S\-P\-H\-Hash@{S\-P\-H\-Hash}!get\-Neighbours@{get\-Neighbours}}
+\index{get\-Neighbours@{get\-Neighbours}!SPHHash@{S\-P\-H\-Hash}}
+\subsubsection[{get\-Neighbours}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$ {\bf particle} $\ast$ $>$ S\-P\-H\-Hash\-::get\-Neighbours (
+\begin{DoxyParamCaption}
+\item[{{\bf particle} $\ast$}]{\-\_\-current\-Particle, }
+\item[{int}]{num\-Particles}
+\end{DoxyParamCaption}
+)}}\label{classSPHHash_ab82b9de0e52cf1bd70cd508bdfd4f1c9}
+
+
+Returns a vector of a limited number of particles neighbours, used for optimization. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \-\_\-current\-Particle} & -\/ the particle we want to ind the neighbours of \\
+\hline
+{\em num\-Particles} & -\/ the max number of particles you want to sample \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+num\-Particle amount or neighbours to our current particle 
+\end{DoxyReturn}
+\hypertarget{classSPHHash_a4e9e9732324d78090691c16a826ce0b4}{\index{S\-P\-H\-Hash@{S\-P\-H\-Hash}!get\-Prime@{get\-Prime}}
+\index{get\-Prime@{get\-Prime}!SPHHash@{S\-P\-H\-Hash}}
+\subsubsection[{get\-Prime}]{\setlength{\rightskip}{0pt plus 5cm}int S\-P\-H\-Hash\-::get\-Prime (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-array\-Pos}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classSPHHash_a4e9e9732324d78090691c16a826ce0b4}
+
+
+accessor for our prime numbers if we want to query them 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \-\_\-array\-Pos} & -\/ the position of the array that holds the 3 prime numbers \\
+\hline
+\end{DoxyParams}
+\hypertarget{classSPHHash_a3c4deda30ec87a73d29f6c0b949dd61e}{\index{S\-P\-H\-Hash@{S\-P\-H\-Hash}!hash\-Function@{hash\-Function}}
+\index{hash\-Function@{hash\-Function}!SPHHash@{S\-P\-H\-Hash}}
+\subsubsection[{hash\-Function}]{\setlength{\rightskip}{0pt plus 5cm}int S\-P\-H\-Hash\-::hash\-Function (
+\begin{DoxyParamCaption}
+\item[{{\bf particle} $\ast$}]{\-\_\-particle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classSPHHash_a3c4deda30ec87a73d29f6c0b949dd61e}
+
+
+Hash function that generates a key based on the particle position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \-\_\-particle} & -\/ the particle we want to create the key for \\
+\hline
+\end{DoxyParams}
+\hypertarget{classSPHHash_a3a8bfb900e3f8939134b68d992a4e44b}{\index{S\-P\-H\-Hash@{S\-P\-H\-Hash}!next\-Prime\-Num@{next\-Prime\-Num}}
+\index{next\-Prime\-Num@{next\-Prime\-Num}!SPHHash@{S\-P\-H\-Hash}}
+\subsubsection[{next\-Prime\-Num}]{\setlength{\rightskip}{0pt plus 5cm}int S\-P\-H\-Hash\-::next\-Prime\-Num (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-current\-Num}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classSPHHash_a3a8bfb900e3f8939134b68d992a4e44b}
+
+
+A simple function that returns the next prime number from an input number. This is used in calculating our hash. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \-\_\-current\-Num} & -\/ the number you want to calclate for \\
+\hline
+\end{DoxyParams}
+\hypertarget{classSPHHash_a7f2a79b0f805eaec59261bcb4c152fe3}{\index{S\-P\-H\-Hash@{S\-P\-H\-Hash}!set\-Prime@{set\-Prime}}
+\index{set\-Prime@{set\-Prime}!SPHHash@{S\-P\-H\-Hash}}
+\subsubsection[{set\-Prime}]{\setlength{\rightskip}{0pt plus 5cm}void S\-P\-H\-Hash\-::set\-Prime (
+\begin{DoxyParamCaption}
+\item[{int}]{\-\_\-array\-Pos, }
+\item[{double}]{\-\_\-prime}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classSPHHash_a7f2a79b0f805eaec59261bcb4c152fe3}
+
+
+mutator for our prime numbers if we want to set them to somthing else 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \-\_\-array\-Pos} & -\/ position of the array that holds the 3 prime numbers \\
+\hline
+{\em \-\_\-prime} & -\/ the number you want to set it to \\
+\hline
+\end{DoxyParams}
+\hypertarget{classSPHHash_abb619376308257ed514a52af3615ac96}{\index{S\-P\-H\-Hash@{S\-P\-H\-Hash}!set\-Smoothing\-Length@{set\-Smoothing\-Length}}
+\index{set\-Smoothing\-Length@{set\-Smoothing\-Length}!SPHHash@{S\-P\-H\-Hash}}
+\subsubsection[{set\-Smoothing\-Length}]{\setlength{\rightskip}{0pt plus 5cm}void S\-P\-H\-Hash\-::set\-Smoothing\-Length (
+\begin{DoxyParamCaption}
+\item[{float}]{\-\_\-smoothing\-Length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classSPHHash_abb619376308257ed514a52af3615ac96}
+
+
+A mutatator for our smoothing length, h variable in navier stokes eqations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \-\_\-smoothing\-Length} & -\/ the smoothing length \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{SPHHash_8h}{S\-P\-H\-Hash.\-h}\item 
+src/S\-P\-H\-Hash.\-cpp\end{DoxyCompactItemize}

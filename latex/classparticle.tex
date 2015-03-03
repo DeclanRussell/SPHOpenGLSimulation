@@ -1,0 +1,222 @@
+\hypertarget{classparticle}{\section{particle Class Reference}
+\label{classparticle}\index{particle@{particle}}
+}
+
+
+Our particle class.  
+
+
+
+
+{\ttfamily \#include $<$particle.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classparticle_a2849319f713e734cf009587505ba1075}{particle} (ngl\-::\-Vec3 $\ast$\-\_\-pos, float \-\_\-mass, bool \-\_\-part\-Of\-Mesh=false)
+\begin{DoxyCompactList}\small\item\em our constructor to create our particle \end{DoxyCompactList}\item 
+\hypertarget{classparticle_a6527e937e7db59e6edb6ae051c51866e}{\hyperlink{classparticle_a6527e937e7db59e6edb6ae051c51866e}{$\sim$particle} ()}\label{classparticle_a6527e937e7db59e6edb6ae051c51866e}
+
+\begin{DoxyCompactList}\small\item\em default dtor \end{DoxyCompactList}\item 
+\hypertarget{classparticle_ae6ee47584e0d79b3497ad2b906d764d5}{ngl\-::\-Vec3 \hyperlink{classparticle_ae6ee47584e0d79b3497ad2b906d764d5}{get\-Pos} () const }\label{classparticle_ae6ee47584e0d79b3497ad2b906d764d5}
+
+\begin{DoxyCompactList}\small\item\em A function to return our particles position. \end{DoxyCompactList}\item 
+\hypertarget{classparticle_abdcf2fa79e90f4b82c1d2eb5135e1322}{ngl\-::\-Vec3 \hyperlink{classparticle_abdcf2fa79e90f4b82c1d2eb5135e1322}{get\-Acc} () const }\label{classparticle_abdcf2fa79e90f4b82c1d2eb5135e1322}
+
+\begin{DoxyCompactList}\small\item\em A function to return our particles Acceleration. \end{DoxyCompactList}\item 
+\hypertarget{classparticle_a724a0799183e2a8f3665625187aaff30}{ngl\-::\-Vec3 \hyperlink{classparticle_a724a0799183e2a8f3665625187aaff30}{get\-Vel} () const }\label{classparticle_a724a0799183e2a8f3665625187aaff30}
+
+\begin{DoxyCompactList}\small\item\em A function to return our particles velocity. \end{DoxyCompactList}\item 
+\hypertarget{classparticle_ae5bff0edd62b18cabdd334b6d70d37a7}{float \hyperlink{classparticle_ae5bff0edd62b18cabdd334b6d70d37a7}{get\-Radius} () const }\label{classparticle_ae5bff0edd62b18cabdd334b6d70d37a7}
+
+\begin{DoxyCompactList}\small\item\em A function to return the radius of our particle. \end{DoxyCompactList}\item 
+void \hyperlink{classparticle_ab5e66d4d32f574767b9fd930224ae5ca}{set\-Pos} (ngl\-::\-Vec3 \-\_\-pos)
+\begin{DoxyCompactList}\small\item\em A function to update our Postion once calculated. \end{DoxyCompactList}\item 
+void \hyperlink{classparticle_a7802fa188578565fe14ae6701366e99e}{set\-Acc} (ngl\-::\-Vec3 \-\_\-acc)
+\begin{DoxyCompactList}\small\item\em A function to update our Acceleration once calculated. \end{DoxyCompactList}\item 
+void \hyperlink{classparticle_a63a467234510f284bb9a6ce9f3948be2}{set\-Vel} (ngl\-::\-Vec3 \-\_\-vel)
+\begin{DoxyCompactList}\small\item\em A function to update our Velocity once calculated. \end{DoxyCompactList}\item 
+void \hyperlink{classparticle_a2d12e2ddf643d3c3c9d76fbc37be76af}{set\-Mass} (float \-\_\-mass)
+\begin{DoxyCompactList}\small\item\em sets the mass of our particle \end{DoxyCompactList}\item 
+\hypertarget{classparticle_a9580ed056e4454fb9af79f98f2283497}{float \hyperlink{classparticle_a9580ed056e4454fb9af79f98f2283497}{get\-Mass} ()}\label{classparticle_a9580ed056e4454fb9af79f98f2283497}
+
+\begin{DoxyCompactList}\small\item\em returns the mass of our particle \end{DoxyCompactList}\item 
+void \hyperlink{classparticle_ab31fe756e1178e92cd4ee758635195ce}{set\-Density} (float \-\_\-density)
+\begin{DoxyCompactList}\small\item\em sets the dynamic density of our particle \end{DoxyCompactList}\item 
+\hypertarget{classparticle_a2cf7e7f0fbc93851a8c73cf824528968}{float \hyperlink{classparticle_a2cf7e7f0fbc93851a8c73cf824528968}{get\-Rest\-Density} ()}\label{classparticle_a2cf7e7f0fbc93851a8c73cf824528968}
+
+\begin{DoxyCompactList}\small\item\em returns the rest density of our particle \end{DoxyCompactList}\item 
+void \hyperlink{classparticle_a87171c315e8fe569d833a5bf26e22213}{set\-Rest\-Density} (float \-\_\-density)
+\begin{DoxyCompactList}\small\item\em sets the rest density of our particle \end{DoxyCompactList}\item 
+\hypertarget{classparticle_a48283e5e0e3fa83e19f7cfd286a863b1}{float \hyperlink{classparticle_a48283e5e0e3fa83e19f7cfd286a863b1}{get\-Density} ()}\label{classparticle_a48283e5e0e3fa83e19f7cfd286a863b1}
+
+\begin{DoxyCompactList}\small\item\em returns the density of our particle \end{DoxyCompactList}\item 
+void \hyperlink{classparticle_a6193659820dd29890c3319da28346658}{draw} (ngl\-::\-Transform\-Stack trans)
+\begin{DoxyCompactList}\small\item\em draws our particles \end{DoxyCompactList}\item 
+void \hyperlink{classparticle_a795f103cded87c05bf417f0b96adbbfd}{set\-Camera} (ngl\-::\-Camera $\ast$\-\_\-c)
+\begin{DoxyCompactList}\small\item\em set our scenes camera so we know our V\-P matrices for drawing \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Our particle class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classparticle_a2849319f713e734cf009587505ba1075}{\index{particle@{particle}!particle@{particle}}
+\index{particle@{particle}!particle@{particle}}
+\subsubsection[{particle}]{\setlength{\rightskip}{0pt plus 5cm}particle\-::particle (
+\begin{DoxyParamCaption}
+\item[{ngl\-::\-Vec3 $\ast$}]{\-\_\-pos, }
+\item[{float}]{\-\_\-mass, }
+\item[{bool}]{\-\_\-part\-Of\-Mesh = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{classparticle_a2849319f713e734cf009587505ba1075}
+
+
+our constructor to create our particle 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \-\_\-pos} & -\/ a ngl\-::vec3$\ast$ of the position of our particle \\
+\hline
+{\em \-\_\-mass} & -\/ the mass of our particle used for later calculations \\
+\hline
+{\em \-\_\-part\-Of\-Mesh} & -\/ if part of mesh will store a pointer to the vector location else will create a local one \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classparticle_a6193659820dd29890c3319da28346658}{\index{particle@{particle}!draw@{draw}}
+\index{draw@{draw}!particle@{particle}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void particle\-::draw (
+\begin{DoxyParamCaption}
+\item[{ngl\-::\-Transform\-Stack}]{trans}
+\end{DoxyParamCaption}
+)}}\label{classparticle_a6193659820dd29890c3319da28346658}
+
+
+draws our particles 
+
+
+\begin{DoxyParams}{Parameters}
+{\em trans} & -\/ our scenes transform stack to get our M matrix \\
+\hline
+\end{DoxyParams}
+\hypertarget{classparticle_a7802fa188578565fe14ae6701366e99e}{\index{particle@{particle}!set\-Acc@{set\-Acc}}
+\index{set\-Acc@{set\-Acc}!particle@{particle}}
+\subsubsection[{set\-Acc}]{\setlength{\rightskip}{0pt plus 5cm}void particle\-::set\-Acc (
+\begin{DoxyParamCaption}
+\item[{ngl\-::\-Vec3}]{\-\_\-acc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classparticle_a7802fa188578565fe14ae6701366e99e}
+
+
+A function to update our Acceleration once calculated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \-\_\-acc} & the acceleration Vertext \\
+\hline
+\end{DoxyParams}
+\hypertarget{classparticle_a795f103cded87c05bf417f0b96adbbfd}{\index{particle@{particle}!set\-Camera@{set\-Camera}}
+\index{set\-Camera@{set\-Camera}!particle@{particle}}
+\subsubsection[{set\-Camera}]{\setlength{\rightskip}{0pt plus 5cm}void particle\-::set\-Camera (
+\begin{DoxyParamCaption}
+\item[{ngl\-::\-Camera $\ast$}]{\-\_\-c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classparticle_a795f103cded87c05bf417f0b96adbbfd}
+
+
+set our scenes camera so we know our V\-P matrices for drawing 
+
+
+\begin{DoxyParams}{Parameters}
+{\em our} & scenes camera \\
+\hline
+\end{DoxyParams}
+\hypertarget{classparticle_ab31fe756e1178e92cd4ee758635195ce}{\index{particle@{particle}!set\-Density@{set\-Density}}
+\index{set\-Density@{set\-Density}!particle@{particle}}
+\subsubsection[{set\-Density}]{\setlength{\rightskip}{0pt plus 5cm}void particle\-::set\-Density (
+\begin{DoxyParamCaption}
+\item[{float}]{\-\_\-density}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classparticle_ab31fe756e1178e92cd4ee758635195ce}
+
+
+sets the dynamic density of our particle 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \-\_\-density} & -\/ the density \\
+\hline
+\end{DoxyParams}
+\hypertarget{classparticle_a2d12e2ddf643d3c3c9d76fbc37be76af}{\index{particle@{particle}!set\-Mass@{set\-Mass}}
+\index{set\-Mass@{set\-Mass}!particle@{particle}}
+\subsubsection[{set\-Mass}]{\setlength{\rightskip}{0pt plus 5cm}void particle\-::set\-Mass (
+\begin{DoxyParamCaption}
+\item[{float}]{\-\_\-mass}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classparticle_a2d12e2ddf643d3c3c9d76fbc37be76af}
+
+
+sets the mass of our particle 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \-\_\-mass} & -\/ the mass \\
+\hline
+\end{DoxyParams}
+\hypertarget{classparticle_ab5e66d4d32f574767b9fd930224ae5ca}{\index{particle@{particle}!set\-Pos@{set\-Pos}}
+\index{set\-Pos@{set\-Pos}!particle@{particle}}
+\subsubsection[{set\-Pos}]{\setlength{\rightskip}{0pt plus 5cm}void particle\-::set\-Pos (
+\begin{DoxyParamCaption}
+\item[{ngl\-::\-Vec3}]{\-\_\-pos}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classparticle_ab5e66d4d32f574767b9fd930224ae5ca}
+
+
+A function to update our Postion once calculated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \-\_\-pos} & Vertex position \\
+\hline
+\end{DoxyParams}
+\hypertarget{classparticle_a87171c315e8fe569d833a5bf26e22213}{\index{particle@{particle}!set\-Rest\-Density@{set\-Rest\-Density}}
+\index{set\-Rest\-Density@{set\-Rest\-Density}!particle@{particle}}
+\subsubsection[{set\-Rest\-Density}]{\setlength{\rightskip}{0pt plus 5cm}void particle\-::set\-Rest\-Density (
+\begin{DoxyParamCaption}
+\item[{float}]{\-\_\-density}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classparticle_a87171c315e8fe569d833a5bf26e22213}
+
+
+sets the rest density of our particle 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \-\_\-density} & -\/ the rest density \\
+\hline
+\end{DoxyParams}
+\hypertarget{classparticle_a63a467234510f284bb9a6ce9f3948be2}{\index{particle@{particle}!set\-Vel@{set\-Vel}}
+\index{set\-Vel@{set\-Vel}!particle@{particle}}
+\subsubsection[{set\-Vel}]{\setlength{\rightskip}{0pt plus 5cm}void particle\-::set\-Vel (
+\begin{DoxyParamCaption}
+\item[{ngl\-::\-Vec3}]{\-\_\-vel}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classparticle_a63a467234510f284bb9a6ce9f3948be2}
+
+
+A function to update our Velocity once calculated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \-\_\-vel} & the Velocity Vertex \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{particle_8h}{particle.\-h}\item 
+src/particle.\-cpp\end{DoxyCompactItemize}

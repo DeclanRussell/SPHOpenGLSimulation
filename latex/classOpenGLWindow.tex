@@ -1,0 +1,66 @@
+\hypertarget{classOpenGLWindow}{\section{Open\-G\-L\-Window Class Reference}
+\label{classOpenGLWindow}\index{Open\-G\-L\-Window@{Open\-G\-L\-Window}}
+}
+Inheritance diagram for Open\-G\-L\-Window\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classOpenGLWindow}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classOpenGLWindow_abea9e50147496e5110b86f03122fbece}{void \hyperlink{classOpenGLWindow_abea9e50147496e5110b86f03122fbece}{render\-Later} ()}\label{classOpenGLWindow_abea9e50147496e5110b86f03122fbece}
+
+\begin{DoxyCompactList}\small\item\em Qt slot to allow use to queue up a render for the next avaliable event process. \end{DoxyCompactList}\item 
+\hypertarget{classOpenGLWindow_a8398ed62d646739fe54fae94c477ad1d}{void \hyperlink{classOpenGLWindow_a8398ed62d646739fe54fae94c477ad1d}{render\-Now} ()}\label{classOpenGLWindow_a8398ed62d646739fe54fae94c477ad1d}
+
+\begin{DoxyCompactList}\small\item\em slot to tell us to render immediatly \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classOpenGLWindow_a2fd92afd17361a60e058dc5433c316af}{Open\-G\-L\-Window} (Q\-Window $\ast$\-\_\-parent=0)
+\begin{DoxyCompactList}\small\item\em ctor for Open\-G\-L window must set the surface type to Open\-G\-L \end{DoxyCompactList}\item 
+\hypertarget{classOpenGLWindow_aa220b192c71871aab9100f4058a8d62d}{\hyperlink{classOpenGLWindow_aa220b192c71871aab9100f4058a8d62d}{$\sim$\-Open\-G\-L\-Window} ()}\label{classOpenGLWindow_aa220b192c71871aab9100f4058a8d62d}
+
+\begin{DoxyCompactList}\small\item\em dtor, remember to remove the device once finished \end{DoxyCompactList}\item 
+\hypertarget{classOpenGLWindow_a0e0194a4f0a30af7249819094c7d1d35}{virtual void \hyperlink{classOpenGLWindow_a0e0194a4f0a30af7249819094c7d1d35}{render} ()=0}\label{classOpenGLWindow_a0e0194a4f0a30af7249819094c7d1d35}
+
+\begin{DoxyCompactList}\small\item\em pure virtual render method we override in our base class to do our drawing, called every update \end{DoxyCompactList}\item 
+\hypertarget{classOpenGLWindow_a00b6a24198503b88aea4c5a995723db2}{virtual void \hyperlink{classOpenGLWindow_a00b6a24198503b88aea4c5a995723db2}{initialize} ()=0}\label{classOpenGLWindow_a00b6a24198503b88aea4c5a995723db2}
+
+\begin{DoxyCompactList}\small\item\em pure virtual initialize method we override in our base class to do our drawing this is only called one time, just after we have a valid G\-L context use this to init any global G\-L elements \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classOpenGLWindow_a1e3045cffb900de55b7384f5091c9d94}{bool \hyperlink{classOpenGLWindow_a1e3045cffb900de55b7384f5091c9d94}{event} (Q\-Event $\ast$event)}\label{classOpenGLWindow_a1e3045cffb900de55b7384f5091c9d94}
+
+\begin{DoxyCompactList}\small\item\em qt event processing if we post render\-Later event this will be called and execute a render \end{DoxyCompactList}\item 
+\hypertarget{classOpenGLWindow_a991121ba7a4bbfa208fa74e5c86004c3}{void \hyperlink{classOpenGLWindow_a991121ba7a4bbfa208fa74e5c86004c3}{expose\-Event} (Q\-Expose\-Event $\ast$\hyperlink{classOpenGLWindow_a1e3045cffb900de55b7384f5091c9d94}{event})}\label{classOpenGLWindow_a991121ba7a4bbfa208fa74e5c86004c3}
+
+\begin{DoxyCompactList}\small\item\em this even is called when the window is made visible and will trigger a render \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classOpenGLWindow_a2fd92afd17361a60e058dc5433c316af}{\index{Open\-G\-L\-Window@{Open\-G\-L\-Window}!Open\-G\-L\-Window@{Open\-G\-L\-Window}}
+\index{Open\-G\-L\-Window@{Open\-G\-L\-Window}!OpenGLWindow@{Open\-G\-L\-Window}}
+\subsubsection[{Open\-G\-L\-Window}]{\setlength{\rightskip}{0pt plus 5cm}Open\-G\-L\-Window\-::\-Open\-G\-L\-Window (
+\begin{DoxyParamCaption}
+\item[{Q\-Window $\ast$}]{\-\_\-parent = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{classOpenGLWindow_a2fd92afd17361a60e058dc5433c316af}
+
+
+ctor for Open\-G\-L window must set the surface type to Open\-G\-L 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em parent} & the parent window to the class \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{OpenGLWindow_8h}{Open\-G\-L\-Window.\-h}\item 
+src/Open\-G\-L\-Window.\-cpp\end{DoxyCompactItemize}

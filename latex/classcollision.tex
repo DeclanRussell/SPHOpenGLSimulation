@@ -1,0 +1,284 @@
+\hypertarget{classcollision}{\section{collision Class Reference}
+\label{classcollision}\index{collision@{collision}}
+}
+
+
+Used to calculate collisions from particles.  
+
+
+
+
+{\ttfamily \#include $<$collision.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classcollision_af81d083d1231af3936a07cc145835447}{\hyperlink{classcollision_af81d083d1231af3936a07cc145835447}{collision} ()}\label{classcollision_af81d083d1231af3936a07cc145835447}
+
+\begin{DoxyCompactList}\small\item\em default ctor \end{DoxyCompactList}\item 
+\hypertarget{classcollision_af3904c7b02c25aed19a514a04a88644b}{\hyperlink{classcollision_af3904c7b02c25aed19a514a04a88644b}{$\sim$collision} ()}\label{classcollision_af3904c7b02c25aed19a514a04a88644b}
+
+\begin{DoxyCompactList}\small\item\em default dtor \end{DoxyCompactList}\item 
+void \hyperlink{classcollision_ad072407fb933f9b1898ef8171c18387c}{test\-Collision\-With\-Walls} (\hyperlink{classparticle}{particle} $\ast$\-\_\-test\-Particle, float \-\_\-time\-Step)
+\begin{DoxyCompactList}\small\item\em A functioin to run through all of the walls and test a selected particle for collision. \end{DoxyCompactList}\item 
+void \hyperlink{classcollision_a059c75126f696331e5aa72eb21901df8}{test\-Collision\-With\-Particles} (\hyperlink{classparticle}{particle} $\ast$\-\_\-test\-Particle, std\-::vector$<$ \hyperlink{classparticle}{particle} $\ast$ $>$ \-\_\-neighbours)
+\begin{DoxyCompactList}\small\item\em Particle and particle reflected collision, implemented but does not run default. \end{DoxyCompactList}\item 
+void \hyperlink{classcollision_afe7fd826adf06477522d5e24deef1064}{add\-Wall} (ngl\-::\-Vec3 \-\_\-normal, ngl\-::\-Vec3 \-\_\-center, bool \-\_\-draw, float \-\_\-draw\-Size\-X, float \-\_\-draw\-Size\-Y, float \-\_\-draw\-Size\-Z)
+\begin{DoxyCompactList}\small\item\em Add a wall to our scene. \end{DoxyCompactList}\item 
+void \hyperlink{classcollision_aaac9bc58b2e48f7c262fa1efe834eb4c}{init\-Particle\-Collision} (\hyperlink{classparticle}{particle} $\ast$\-\_\-test\-Particle, std\-::vector$<$ \hyperlink{classparticle}{particle} $\ast$ $>$ \-\_\-particles)
+\begin{DoxyCompactList}\small\item\em If particles are inside each other moves them apart. \end{DoxyCompactList}\item 
+void \hyperlink{classcollision_add27363d174ede208c840b8eb284a34a}{set\-Coef\-Of\-Rest} (float \-\_\-x)
+\begin{DoxyCompactList}\small\item\em Set the coefficient of restitution for our walls. \end{DoxyCompactList}\item 
+void \hyperlink{classcollision_a2e8c12193fc78bc8895b741f34a2f8c8}{set\-Coef\-Of\-Fric} (float \-\_\-x)
+\begin{DoxyCompactList}\small\item\em Set the coefficient of friction for our walls. \end{DoxyCompactList}\item 
+void \hyperlink{classcollision_a8abe6aa1ad18a45acd1144752222b014}{draw\-Walls} (ngl\-::\-Transform\-Stack $\ast$\-\_\-trans, ngl\-::\-Camera $\ast$\-\_\-cam)
+\begin{DoxyCompactList}\small\item\em draws our walls to the scene \end{DoxyCompactList}\item 
+ngl\-::\-Vec3 \hyperlink{classcollision_a91504adc5badb96d7ba53e8be7923728}{get\-Rotation\-From\-Y} (ngl\-::\-Vec3 \-\_\-vec) const 
+\begin{DoxyCompactList}\small\item\em finds the rotation for Y of a vector \end{DoxyCompactList}\item 
+void \hyperlink{classcollision_afbd4c4d461710c9734b77d431f126de3}{set\-Wall} (unsigned int \-\_\-wall, ngl\-::\-Vec3 \-\_\-normal=ngl\-::\-Vec3(0), ngl\-::\-Vec3 \-\_\-center=ngl\-::\-Vec3(0), bool \-\_\-draw=true, float \-\_\-draw\-Size\-X=0, float \-\_\-draw\-Size\-Y=0, float \-\_\-draw\-Size\-Z=0)
+\begin{DoxyCompactList}\small\item\em A mutator to change the position of our walls. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classcollision_aa1636f1eea3912906a36831c9b43f462}{calculate\-Wall\-Collision} (\hyperlink{classparticle}{particle} $\ast$\-\_\-test\-Particle, float \-\_\-time\-Step, ngl\-::\-Vec4 \-\_\-ground)
+\begin{DoxyCompactList}\small\item\em calculates and updates a particles position and velocity depending on if it has a collision with the ground \end{DoxyCompactList}\item 
+void \hyperlink{classcollision_aa7862d6a6f35f02c4a1f4c564e942fcc}{calculate\-Particle\-Collision} (\hyperlink{classparticle}{particle} $\ast$\-\_\-test\-Particle, std\-::vector$<$ \hyperlink{classparticle}{particle} $\ast$ $>$ \-\_\-neighbours)
+\begin{DoxyCompactList}\small\item\em calculates and updates a particles position and velocity depending on if it has a collision with other particles \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Used to calculate collisions from particles. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classcollision_afe7fd826adf06477522d5e24deef1064}{\index{collision@{collision}!add\-Wall@{add\-Wall}}
+\index{add\-Wall@{add\-Wall}!collision@{collision}}
+\subsubsection[{add\-Wall}]{\setlength{\rightskip}{0pt plus 5cm}void collision\-::add\-Wall (
+\begin{DoxyParamCaption}
+\item[{ngl\-::\-Vec3}]{\-\_\-normal, }
+\item[{ngl\-::\-Vec3}]{\-\_\-center, }
+\item[{bool}]{\-\_\-draw, }
+\item[{float}]{\-\_\-draw\-Size\-X, }
+\item[{float}]{\-\_\-draw\-Size\-Y, }
+\item[{float}]{\-\_\-draw\-Size\-Z}
+\end{DoxyParamCaption}
+)}}\label{classcollision_afe7fd826adf06477522d5e24deef1064}
+
+
+Add a wall to our scene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \-\_\-normal} & the direction we wish for our wall to point in \\
+\hline
+{\em \-\_\-center} & the postion we wish for our wall to be \\
+\hline
+{\em \-\_\-draw} & a bool for if we want to draw \\
+\hline
+{\em \-\_\-draw\-Size\-X} & how big we want to draw our wall in X scale \\
+\hline
+{\em \-\_\-draw\-Size\-Y} & how big we want to draw our wall in Y scale \\
+\hline
+{\em \-\_\-draw\-Size\-Z} & how big we want to draw our wall in Z scale \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcollision_aa7862d6a6f35f02c4a1f4c564e942fcc}{\index{collision@{collision}!calculate\-Particle\-Collision@{calculate\-Particle\-Collision}}
+\index{calculate\-Particle\-Collision@{calculate\-Particle\-Collision}!collision@{collision}}
+\subsubsection[{calculate\-Particle\-Collision}]{\setlength{\rightskip}{0pt plus 5cm}void collision\-::calculate\-Particle\-Collision (
+\begin{DoxyParamCaption}
+\item[{{\bf particle} $\ast$}]{\-\_\-test\-Particle, }
+\item[{std\-::vector$<$ {\bf particle} $\ast$ $>$}]{\-\_\-neighbours}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classcollision_aa7862d6a6f35f02c4a1f4c564e942fcc}
+
+
+calculates and updates a particles position and velocity depending on if it has a collision with other particles 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \-\_\-test\-Particle} & the particle we wish to update \\
+\hline
+{\em \-\_\-neighbours} & the time step between our calcuations, this is used in calculting the friction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+collision init should be called or you could get errors with calculation as particles could be spawned within particles 
+\end{DoxyWarning}
+\hypertarget{classcollision_aa1636f1eea3912906a36831c9b43f462}{\index{collision@{collision}!calculate\-Wall\-Collision@{calculate\-Wall\-Collision}}
+\index{calculate\-Wall\-Collision@{calculate\-Wall\-Collision}!collision@{collision}}
+\subsubsection[{calculate\-Wall\-Collision}]{\setlength{\rightskip}{0pt plus 5cm}void collision\-::calculate\-Wall\-Collision (
+\begin{DoxyParamCaption}
+\item[{{\bf particle} $\ast$}]{\-\_\-test\-Particle, }
+\item[{float}]{\-\_\-time\-Step, }
+\item[{ngl\-::\-Vec4}]{\-\_\-ground}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classcollision_aa1636f1eea3912906a36831c9b43f462}
+
+
+calculates and updates a particles position and velocity depending on if it has a collision with the ground 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \-\_\-test\-Particle} & the particle we wish to update \\
+\hline
+{\em \-\_\-time\-Step} & the time step between our calcuations, this is used in calculting the friction \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcollision_a8abe6aa1ad18a45acd1144752222b014}{\index{collision@{collision}!draw\-Walls@{draw\-Walls}}
+\index{draw\-Walls@{draw\-Walls}!collision@{collision}}
+\subsubsection[{draw\-Walls}]{\setlength{\rightskip}{0pt plus 5cm}void collision\-::draw\-Walls (
+\begin{DoxyParamCaption}
+\item[{ngl\-::\-Transform\-Stack $\ast$}]{\-\_\-trans, }
+\item[{ngl\-::\-Camera $\ast$}]{\-\_\-cam}
+\end{DoxyParamCaption}
+)}}\label{classcollision_a8abe6aa1ad18a45acd1144752222b014}
+
+
+draws our walls to the scene 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \-\_\-trans} & Our global transformation stack of our scene so we can retrieve model matrix \\
+\hline
+{\em \-\_\-cam} & The camera of our scene to retrieve view and perspective matrix \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcollision_a91504adc5badb96d7ba53e8be7923728}{\index{collision@{collision}!get\-Rotation\-From\-Y@{get\-Rotation\-From\-Y}}
+\index{get\-Rotation\-From\-Y@{get\-Rotation\-From\-Y}!collision@{collision}}
+\subsubsection[{get\-Rotation\-From\-Y}]{\setlength{\rightskip}{0pt plus 5cm}ngl\-::\-Vec3 collision\-::get\-Rotation\-From\-Y (
+\begin{DoxyParamCaption}
+\item[{ngl\-::\-Vec3}]{\-\_\-vec}
+\end{DoxyParamCaption}
+) const}}\label{classcollision_a91504adc5badb96d7ba53e8be7923728}
+
+
+finds the rotation for Y of a vector 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \-\_\-vec} & the vector we wish to find the rotation from Y \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcollision_aaac9bc58b2e48f7c262fa1efe834eb4c}{\index{collision@{collision}!init\-Particle\-Collision@{init\-Particle\-Collision}}
+\index{init\-Particle\-Collision@{init\-Particle\-Collision}!collision@{collision}}
+\subsubsection[{init\-Particle\-Collision}]{\setlength{\rightskip}{0pt plus 5cm}void collision\-::init\-Particle\-Collision (
+\begin{DoxyParamCaption}
+\item[{{\bf particle} $\ast$}]{\-\_\-test\-Particle, }
+\item[{std\-::vector$<$ {\bf particle} $\ast$ $>$}]{\-\_\-particles}
+\end{DoxyParamCaption}
+)}}\label{classcollision_aaac9bc58b2e48f7c262fa1efe834eb4c}
+
+
+If particles are inside each other moves them apart. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \-\_\-test\-Particle} & the particle we want to test \\
+\hline
+{\em \-\_\-particles} & our array of particles we wish to test against \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcollision_a2e8c12193fc78bc8895b741f34a2f8c8}{\index{collision@{collision}!set\-Coef\-Of\-Fric@{set\-Coef\-Of\-Fric}}
+\index{set\-Coef\-Of\-Fric@{set\-Coef\-Of\-Fric}!collision@{collision}}
+\subsubsection[{set\-Coef\-Of\-Fric}]{\setlength{\rightskip}{0pt plus 5cm}void collision\-::set\-Coef\-Of\-Fric (
+\begin{DoxyParamCaption}
+\item[{float}]{\-\_\-x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classcollision_a2e8c12193fc78bc8895b741f34a2f8c8}
+
+
+Set the coefficient of friction for our walls. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \-\_\-x} & Value we wish to set to \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcollision_add27363d174ede208c840b8eb284a34a}{\index{collision@{collision}!set\-Coef\-Of\-Rest@{set\-Coef\-Of\-Rest}}
+\index{set\-Coef\-Of\-Rest@{set\-Coef\-Of\-Rest}!collision@{collision}}
+\subsubsection[{set\-Coef\-Of\-Rest}]{\setlength{\rightskip}{0pt plus 5cm}void collision\-::set\-Coef\-Of\-Rest (
+\begin{DoxyParamCaption}
+\item[{float}]{\-\_\-x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classcollision_add27363d174ede208c840b8eb284a34a}
+
+
+Set the coefficient of restitution for our walls. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \-\_\-x} & Value we wish to set to \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcollision_afbd4c4d461710c9734b77d431f126de3}{\index{collision@{collision}!set\-Wall@{set\-Wall}}
+\index{set\-Wall@{set\-Wall}!collision@{collision}}
+\subsubsection[{set\-Wall}]{\setlength{\rightskip}{0pt plus 5cm}void collision\-::set\-Wall (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{\-\_\-wall, }
+\item[{ngl\-::\-Vec3}]{\-\_\-normal = {\ttfamily ngl\-:\-:Vec3(0)}, }
+\item[{ngl\-::\-Vec3}]{\-\_\-center = {\ttfamily ngl\-:\-:Vec3(0)}, }
+\item[{bool}]{\-\_\-draw = {\ttfamily true}, }
+\item[{float}]{\-\_\-draw\-Size\-X = {\ttfamily 0}, }
+\item[{float}]{\-\_\-draw\-Size\-Y = {\ttfamily 0}, }
+\item[{float}]{\-\_\-draw\-Size\-Z = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}}\label{classcollision_afbd4c4d461710c9734b77d431f126de3}
+
+
+A mutator to change the position of our walls. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \-\_\-wall} & the wall in our array we wish to change \\
+\hline
+{\em \-\_\-normal} & the normal we wish to change it to \\
+\hline
+{\em \-\_\-center} & the center of the wall we wish to change to \\
+\hline
+\end{DoxyParams}
+\hypertarget{classcollision_a059c75126f696331e5aa72eb21901df8}{\index{collision@{collision}!test\-Collision\-With\-Particles@{test\-Collision\-With\-Particles}}
+\index{test\-Collision\-With\-Particles@{test\-Collision\-With\-Particles}!collision@{collision}}
+\subsubsection[{test\-Collision\-With\-Particles}]{\setlength{\rightskip}{0pt plus 5cm}void collision\-::test\-Collision\-With\-Particles (
+\begin{DoxyParamCaption}
+\item[{{\bf particle} $\ast$}]{\-\_\-test\-Particle, }
+\item[{std\-::vector$<$ {\bf particle} $\ast$ $>$}]{\-\_\-neighbours}
+\end{DoxyParamCaption}
+)}}\label{classcollision_a059c75126f696331e5aa72eb21901df8}
+
+
+Particle and particle reflected collision, implemented but does not run default. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \-\_\-test\-Particle} & the particle we wish to test for \\
+\hline
+{\em \-\_\-neighbours} & the partciles we wish to test our particle against \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+advised to run init particle collision first so that we dont have partciles inside each other, can cause errors 
+\end{DoxyWarning}
+\hypertarget{classcollision_ad072407fb933f9b1898ef8171c18387c}{\index{collision@{collision}!test\-Collision\-With\-Walls@{test\-Collision\-With\-Walls}}
+\index{test\-Collision\-With\-Walls@{test\-Collision\-With\-Walls}!collision@{collision}}
+\subsubsection[{test\-Collision\-With\-Walls}]{\setlength{\rightskip}{0pt plus 5cm}void collision\-::test\-Collision\-With\-Walls (
+\begin{DoxyParamCaption}
+\item[{{\bf particle} $\ast$}]{\-\_\-test\-Particle, }
+\item[{float}]{\-\_\-time\-Step}
+\end{DoxyParamCaption}
+)}}\label{classcollision_ad072407fb933f9b1898ef8171c18387c}
+
+
+A functioin to run through all of the walls and test a selected particle for collision. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \-\_\-testparticle} & The particle that we wish to test \\
+\hline
+{\em \-\_\-timestep} & used in calculating the friction against the wall \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/collision.\-h\item 
+src/collision.\-cpp\end{DoxyCompactItemize}
